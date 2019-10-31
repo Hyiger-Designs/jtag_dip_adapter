@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:max_breakout-cache
+LIBS:jtag_dip_adapter-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -182,7 +182,7 @@ $EndComp
 Wire Wire Line
 	2500 5350 2500 5300
 $Comp
-L Connector:AVR-JTAG-10 J?
+L jtag_dip_adapter-rescue:AVR-JTAG-10-Connector J?
 U 1 1 5DC12FA5
 P 7500 4500
 AR Path="/5D0F9837/5DC12FA5" Ref="J?"  Part="1" 
@@ -732,22 +732,14 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J5
 U 1 1 5DE7BBC0
-P 1950 2450
-F 0 "J5" H 2030 2442 50  0000 L CNN
-F 1 "Conn_01x02" H 2030 2351 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 1950 2450 50  0001 C CNN
-F 3 "~" H 1950 2450 50  0001 C CNN
-	1    1950 2450
-	1    0    0    -1  
+P 1950 2550
+F 0 "J5" H 2030 2542 50  0000 L CNN
+F 1 "Conn_01x02" H 2030 2451 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 1950 2550 50  0001 C CNN
+F 3 "~" H 1950 2550 50  0001 C CNN
+	1    1950 2550
+	1    0    0    1   
 $EndComp
-Wire Wire Line
-	850  2450 1450 2450
-Text Label 1125 2450 2    50   ~ 0
-VCC
-Wire Wire Line
-	850  2550 1750 2550
-Text Label 1150 2550 2    50   ~ 0
-GND
 $Comp
 L Device:LED D2
 U 1 1 5DC12F86
@@ -761,6 +753,10 @@ F 3 "~" H 9600 5150 50  0001 C CNN
 	1    9600 5150
 	-1   0    0    1   
 $EndComp
+Text Label 1150 2550 2    50   ~ 0
+GND
+Wire Wire Line
+	850  2550 1750 2550
 $Comp
 L Diode:BAT54W D3
 U 1 1 5DE90127
@@ -772,4 +768,8 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 1600 245
 	1    1600 2450
 	1    0    0    -1  
 $EndComp
+Text Label 1125 2450 2    50   ~ 0
+VCC
+Wire Wire Line
+	850  2450 1450 2450
 $EndSCHEMATC

@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:max_breakout-cache
+LIBS:jtag_dip_adapter-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -182,7 +182,7 @@ $EndComp
 Wire Wire Line
 	2500 5350 2500 5300
 $Comp
-L Connector:AVR-JTAG-10 J?
+L jtag_dip_adapter-rescue:AVR-JTAG-10-Connector J?
 U 1 1 5DC12FA5
 P 7500 4500
 AR Path="/5D0F9837/5DC12FA5" Ref="J?"  Part="1" 
@@ -206,7 +206,7 @@ AR Path="/5D6224DC/5D9FA47F" Ref="U?"  Part="3"
 AR Path="/5D70CA34/5D9FA47F" Ref="U?"  Part="1" 
 AR Path="/5D9FA47F" Ref="U2"  Part="1" 
 F 0 "U2" H 9175 5417 50  0000 C CNN
-F 1 "74LVC1G04" H 9175 5326 50  0000 C CNN
+F 1 "74HCT1G04" H 9175 5326 50  0000 C CNN
 F 2 "Package_SO:TSOP-5_1.65x3.05mm_P0.95mm" H 9200 5150 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/916/74HC_HCT3G04-1319126.pdf" H 9200 5150 50  0001 C CNN
 	1    9200 5150
@@ -741,12 +741,12 @@ F 3 "~" H 1950 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1150 2450 1750 2450
-Text Label 1425 2450 2    50   ~ 0
+	850  2450 1450 2450
+Text Label 1125 2450 2    50   ~ 0
 VCC
 Wire Wire Line
-	1150 2550 1750 2550
-Text Label 1425 2550 2    50   ~ 0
+	850  2550 1750 2550
+Text Label 1150 2550 2    50   ~ 0
 GND
 $Comp
 L Device:LED D2
@@ -760,5 +760,16 @@ F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9600 5150 50  0001
 F 3 "~" H 9600 5150 50  0001 C CNN
 	1    9600 5150
 	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:BAT54W D3
+U 1 1 5DE90127
+P 1600 2450
+F 0 "D3" H 1600 2716 50  0000 C CNN
+F 1 "BAT54W" H 1600 2625 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 1600 2275 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 1600 2450 50  0001 C CNN
+	1    1600 2450
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
