@@ -60,19 +60,6 @@ TMS
 Text Label 8700 4400 2    50   ~ 0
 TCK
 $Comp
-L THS-80-rescue:LED-Device-max_breakout-rescue-sbc_z80-rescue D2
-U 1 1 5DC12F86
-P 9600 5150
-AR Path="/5DC12F86" Ref="D2"  Part="1" 
-AR Path="/5D70CA34/5DC12F86" Ref="D?"  Part="1" 
-F 0 "D2" H 9625 5025 50  0000 C CNN
-F 1 "Red" H 9600 5250 32  0000 C CNN
-F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9600 5150 50  0001 C CNN
-F 3 "~" H 9600 5150 50  0001 C CNN
-	1    9600 5150
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:R_Small R?
 U 1 1 5DC12F9A
 P 9750 5250
@@ -219,7 +206,7 @@ AR Path="/5D6224DC/5D9FA47F" Ref="U?"  Part="3"
 AR Path="/5D70CA34/5D9FA47F" Ref="U?"  Part="1" 
 AR Path="/5D9FA47F" Ref="U2"  Part="1" 
 F 0 "U2" H 9175 5417 50  0000 C CNN
-F 1 "74LVC1G04" H 9175 5326 50  0000 C CNN
+F 1 "74HCT1G04" H 9175 5326 50  0000 C CNN
 F 2 "Package_SO:TSOP-5_1.65x3.05mm_P0.95mm" H 9200 5150 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/916/74HC_HCT3G04-1319126.pdf" H 9200 5150 50  0001 C CNN
 	1    9200 5150
@@ -367,7 +354,7 @@ F 3 "~" H 8050 1900 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L max_breakout-rescue:USB_B_Micro-Connector J?
+L jtag_dip_adapter-rescue:USB_B_Micro-Connector-max_breakout-rescue J?
 U 1 1 5CF77AF9
 P 1250 1150
 AR Path="/5D0F9837/5CF77AF9" Ref="J?"  Part="1" 
@@ -499,7 +486,7 @@ F 9 "https://www.mouser.com/ProductDetail/963-JMK107B7474KA-T" H 3192 1246 50  0
 	1    0    0    -1  
 $EndComp
 $Comp
-L max_breakout-rescue:MAX40200AUK-Analog_Switch U1
+L jtag_dip_adapter-rescue:MAX40200AUK-Analog_Switch-max_breakout-rescue U1
 U 1 1 5D37EDF6
 P 2550 1050
 F 0 "U1" H 2550 1417 50  0000 C CNN
@@ -754,11 +741,35 @@ F 3 "~" H 1950 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1150 2450 1750 2450
-Text Label 1425 2450 2    50   ~ 0
+	850  2450 1450 2450
+Text Label 1125 2450 2    50   ~ 0
 VCC
 Wire Wire Line
-	1150 2550 1750 2550
-Text Label 1425 2550 2    50   ~ 0
+	850  2550 1750 2550
+Text Label 1150 2550 2    50   ~ 0
 GND
+$Comp
+L Device:LED D2
+U 1 1 5DC12F86
+P 9600 5150
+AR Path="/5DC12F86" Ref="D2"  Part="1" 
+AR Path="/5D70CA34/5DC12F86" Ref="D?"  Part="1" 
+F 0 "D2" H 9625 5025 50  0000 C CNN
+F 1 "Red" H 9600 5250 32  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9600 5150 50  0001 C CNN
+F 3 "~" H 9600 5150 50  0001 C CNN
+	1    9600 5150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:BAT54W D3
+U 1 1 5DE90127
+P 1600 2450
+F 0 "D3" H 1600 2716 50  0000 C CNN
+F 1 "BAT54W" H 1600 2625 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 1600 2275 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 1600 2450 50  0001 C CNN
+	1    1600 2450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
