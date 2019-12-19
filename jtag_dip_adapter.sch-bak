@@ -1,6 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:jtag_dip_adapter-cache
-LIBS:max_breakout-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -544,17 +542,6 @@ Wire Wire Line
 Connection ~ 1150 1550
 Wire Wire Line
 	1150 1800 1150 1850
-$Comp
-L power:PWR_FLAG #FLG01
-U 1 1 5DBEFECE
-P 3100 950
-F 0 "#FLG01" H 3100 1025 50  0001 C CNN
-F 1 "PWR_FLAG" H 3350 1050 50  0000 C CNN
-F 2 "" H 3100 950 50  0001 C CNN
-F 3 "~" H 3100 950 50  0001 C CNN
-	1    3100 950 
-	1    0    0    -1  
-$EndComp
 Text Notes 700  650  0    50   ~ 0
 Power
 Wire Wire Line
@@ -646,21 +633,13 @@ Wire Wire Line
 Text Label 8525 2100 2    50   ~ 0
 TDO
 Wire Wire Line
-	6050 1700 6650 1700
-Text Label 6325 1700 2    50   ~ 0
-VCC
+	5950 1700 6650 1700
 Wire Wire Line
-	6050 2500 6650 2500
-Text Label 6325 2500 2    50   ~ 0
-VCC
+	5950 2500 6650 2500
 Wire Wire Line
-	8250 2400 8850 2400
-Text Label 8525 2400 2    50   ~ 0
-VCC
+	8250 2400 8950 2400
 Wire Wire Line
-	8250 1200 8850 1200
-Text Label 8525 1200 2    50   ~ 0
-VCC
+	8250 1200 8950 1200
 Wire Wire Line
 	6050 1200 6650 1200
 Text Label 6325 1200 2    50   ~ 0
@@ -683,10 +662,6 @@ Wire Wire Line
 Connection ~ 2500 5300
 Wire Wire Line
 	2500 5300 2300 5300
-Wire Wire Line
-	3100 950  3700 950 
-Text Label 3375 950  2    50   ~ 0
-VCC
 NoConn ~ 6650 1000
 NoConn ~ 6650 1100
 NoConn ~ 6650 1300
@@ -746,12 +721,12 @@ $EndComp
 $Comp
 L power:VCC #PWR014
 U 1 1 5DBFD1A1
-P 3350 2700
-F 0 "#PWR014" H 3350 2550 50  0001 C CNN
-F 1 "VCC" H 3367 2873 50  0000 C CNN
-F 2 "" H 3350 2700 50  0001 C CNN
-F 3 "" H 3350 2700 50  0001 C CNN
-	1    3350 2700
+P 3950 2700
+F 0 "#PWR014" H 3950 2550 50  0001 C CNN
+F 1 "VCC" H 3967 2873 50  0000 C CNN
+F 2 "" H 3950 2700 50  0001 C CNN
+F 3 "" H 3950 2700 50  0001 C CNN
+	1    3950 2700
 	1    0    0    -1  
 $EndComp
 Connection ~ 3350 2700
@@ -780,20 +755,6 @@ Wire Wire Line
 Connection ~ 2550 3100
 Wire Wire Line
 	2550 3100 2550 3000
-Wire Wire Line
-	2950 2700 3350 2700
-Wire Wire Line
-	2950 2800 2950 2700
-Wire Wire Line
-	2950 3100 3350 3100
-Wire Wire Line
-	2550 3100 2950 3100
-Connection ~ 2950 3100
-Wire Wire Line
-	2950 3100 2950 3000
-Connection ~ 2950 2700
-Wire Wire Line
-	2550 2700 2950 2700
 Wire Wire Line
 	1400 2700 1650 2700
 Wire Wire Line
@@ -837,17 +798,6 @@ F 3 "~" H 1400 2900 50  0001 C CNN
 	1    1400 2900
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C_Small C11
-U 1 1 5DBFD1D6
-P 2950 2900
-F 0 "C11" H 3042 2946 50  0000 L CNN
-F 1 "2.2uF" H 3042 2855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2950 2900 50  0001 C CNN
-F 3 "~" H 2950 2900 50  0001 C CNN
-	1    2950 2900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2150 3100 2550 3100
 Wire Wire Line
@@ -858,30 +808,100 @@ L Regulator_Linear:LP2985-5.0 U3
 U 1 1 5DBFD1DF
 P 2150 2800
 F 0 "U3" H 2150 3142 50  0000 C CNN
-F 1 "LP2985-5.0" H 2150 3051 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2150 3125 50  0001 C CNN
+F 1 "LP2985-50DBVR" H 2150 3051 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 2150 3125 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lp2985.pdf" H 2150 2800 50  0001 C CNN
 	1    2150 2800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3350 2700 3950 2700
-Text Label 3625 2700 2    50   ~ 0
-VCC
 $Comp
 L Connector_Generic:Conn_01x02 J6
 U 1 1 5DC129B6
-P 1000 2700
-F 0 "J6" H 918 2917 50  0000 C CNN
-F 1 "PWR" H 918 2826 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 1000 2700 50  0001 C CNN
-F 3 "~" H 1000 2700 50  0001 C CNN
-	1    1000 2700
-	-1   0    0    -1  
+P 1000 2800
+F 0 "J6" H 918 3017 50  0000 C CNN
+F 1 "PWR" H 918 2926 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 1000 2800 50  0001 C CNN
+F 3 "~" H 1000 2800 50  0001 C CNN
+	1    1000 2800
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	1200 2800 1200 3100
 Wire Wire Line
 	1200 3100 1400 3100
 Connection ~ 1400 3100
+Wire Wire Line
+	3100 950  3700 950 
+$Comp
+L power:VCC #PWR0101
+U 1 1 5DFC4E0B
+P 3700 950
+F 0 "#PWR0101" H 3700 800 50  0001 C CNN
+F 1 "VCC" H 3717 1123 50  0000 C CNN
+F 2 "" H 3700 950 50  0001 C CNN
+F 3 "" H 3700 950 50  0001 C CNN
+	1    3700 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5DFCB7FB
+P 5950 1700
+F 0 "#PWR0102" H 5950 1550 50  0001 C CNN
+F 1 "VCC" H 5967 1873 50  0000 C CNN
+F 2 "" H 5950 1700 50  0001 C CNN
+F 3 "" H 5950 1700 50  0001 C CNN
+	1    5950 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 5DFD0190
+P 5950 2500
+F 0 "#PWR0103" H 5950 2350 50  0001 C CNN
+F 1 "VCC" H 5967 2673 50  0000 C CNN
+F 2 "" H 5950 2500 50  0001 C CNN
+F 3 "" H 5950 2500 50  0001 C CNN
+	1    5950 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 5DFD9591
+P 8950 2400
+F 0 "#PWR0104" H 8950 2250 50  0001 C CNN
+F 1 "VCC" H 8967 2573 50  0000 C CNN
+F 2 "" H 8950 2400 50  0001 C CNN
+F 3 "" H 8950 2400 50  0001 C CNN
+	1    8950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0105
+U 1 1 5DFDDBA5
+P 8950 1200
+F 0 "#PWR0105" H 8950 1050 50  0001 C CNN
+F 1 "VCC" H 8967 1373 50  0000 C CNN
+F 2 "" H 8950 1200 50  0001 C CNN
+F 3 "" H 8950 1200 50  0001 C CNN
+	1    8950 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5DFE4C19
+P 1400 2700
+F 0 "#FLG0101" H 1400 2775 50  0001 C CNN
+F 1 "PWR_FLAG" H 1400 2873 50  0000 C CNN
+F 2 "" H 1400 2700 50  0001 C CNN
+F 3 "~" H 1400 2700 50  0001 C CNN
+	1    1400 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2700 3350 2700
+Wire Wire Line
+	2550 3100 3350 3100
 $EndSCHEMATC
